@@ -42,7 +42,7 @@ public class ArticleController {
             return res.body();
         });
 
-    Spark.get("/article/:title", (req, res) -> {
+        get("/article/:title", (req, res) -> {
             String title = req.params("title");
             req.body();
 
@@ -67,16 +67,16 @@ public class ArticleController {
              }
      );*/
 
-/*
-       get("/article", (req, res) ->{
+
+       delete("/article/:delete", (req, res) ->{
            res.type("application-json");
          //  String deleteArticle = req.params("article");
           // req.body();
-           Article.deleteArticle(req.params(":id"));
+           Article.deleteArticle(req.params(":delete"));
 
 
 
-         /*  try {
+           try {
                ArticleDTO articleDTO = this.articleService.getArticleDelete();
                res.status(200);
                res.body(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(articleDTO));
@@ -87,7 +87,7 @@ public class ArticleController {
            }
            return res.body();
 
-           });*/
+           });
 
 
        }}
