@@ -1,47 +1,46 @@
 package org.example;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
-import static spark.Spark.post;
+
 public class ArticleService {
-private final ObjectMapper objectMapper;
+
+  private final ObjectMapper objectMapper;
 
 
-   public ArticleService (final ObjectMapper objectMapper){
-       this.objectMapper = objectMapper;
-   }
+  public ArticleService(final ObjectMapper objectMapper) {
+    this.objectMapper = objectMapper;
+  }
 
-    public ArticleDTO getArticle() {
+  public ArticleDTO getArticle() {
 
-       String error = "Error";
-       String access = "Access";
-       String mainArticle = "Main article";
+    String error = "Error";
+    String access = "Access";
+    String mainArticle = "Main article";
 
-       ArticleDTO articleDTO = new ArticleDTO(access, error, mainArticle);
+    ArticleDTO articleDTO = new ArticleDTO(access, error, mainArticle);
 
-        return articleDTO;
-    }
-   public ArticleDTO getArticleTitle(){
+    return articleDTO;
+  }
 
-       String status = "Error";
-       String access = "Access";
-       String mainTitle = "Title";
+  public ArticleDTO getArticleTitle() {
 
-        ArticleDTO articleDTO = new ArticleDTO(access, status, mainTitle);
+    String status = "Error";
+    String access = "Access";
+    String mainTitle = "Title";
 
-        return articleDTO;
-    }
+    ArticleDTO articleDTO = new ArticleDTO(access, status, mainTitle);
 
-    public ArticleDTO getArticleDelete(){
-       String access = "Accepted";
-       String status = "Error";
-       String deletedArticle = "Deleted article";
-       ArticleDTO articleDTO = new ArticleDTO(access,status, deletedArticle );
-       return articleDTO;
-    }
+    return articleDTO;
+  }
+
+  public ArticleDTO getArticleDelete() {
+    String access = "Accepted";
+    String status = "Error";
+    String deletedArticle = "Deleted article";
+    ArticleDTO articleDTO = new ArticleDTO(access, status, deletedArticle);
+    return articleDTO;
+  }
 }
-
-
-
-
 
 //metoda statyczne może być użyta do stworzenia instancji klasy
 
